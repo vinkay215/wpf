@@ -1,9 +1,7 @@
 {
-  "buildCommand": "echo 'Static site ready'",
-  "outputDirectory": ".",
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/wpf.html"
     }
   ]
