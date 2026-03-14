@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Ôn tập .NET / WPF</title>
+
+<style>
+
+body{
+    font-family: Arial;
+    background:#f3f4f6;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+}
+
+.search-container{
+    position:relative;
+    max-width:500px;
+    margin:20px auto;
+}
+
+#search{
+    width:100%;
+    padding:12px 40px 12px 15px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+.clear-btn{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    font-size:18px;
+    color:#888;
+    display:none;
+}
+
+.clear-btn:hover{
+    color:black;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    margin:10px auto;
+    border-radius:8px;
+    max-width:700px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+.answer{
+    margin-top:5px;
+    color:green;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Ôn tập .NET / WPF</h1>
+
+<div class="search-container">
+<input type="text" id="search" placeholder="Tìm câu hỏi...">
+<span class="clear-btn" onclick="clearSearch()">✖</span>
+</div>
+
+<div id="list">
+
+<div class="card">
+<b>Câu 1:</b> Thư viện nào liên quan đến các lớp thực thi chức năng GUI?
+<div class="answer">Đáp án: System.Drawing</div>
+</div>
+
+<div class="card">
+<b>Câu 2:</b> Thư viện nào liên quan đến các lớp toán học?
+<div class="answer">Đáp án: System.Math</div>
+</div>
+
+<div class="card">
+<b>Câu 3:</b> Một khối kèm theo code có thể throw ngoại lệ?
+<div class="answer">Đáp án: Try</div>
+</div>
+
+<div class="card">
+<b>Câu 4:</b> Object có quan hệ gì với các kiểu khác?
+<div class="answer">Đáp án: Cha</div>
+</div>
+
+<div class="card">
+<b>Câu 5:</b> Ứng dụng .NET chạy trên ngôn ngữ nào?
+<div class="answer">Đáp án: Cả 3 ý trên</div>
+</div>
+
+<div class="card">
+<b>Câu 6:</b> Sự kiện FormClosing xảy ra khi nào?
+<div class="answer">Đáp án: Khi form đang đóng</div>
+</div>
+
+<div class="card">
+<b>Câu 7:</b> DataAdapter dùng phương thức nào nạp DataSet?
+<div class="answer">Đáp án: Fill()</div>
+</div>
+
+<div class="card">
+<b>Câu 8:</b> Control nào hiển thị danh sách khi click?
+<div class="answer">Đáp án: ComboBox</div>
+</div>
+
+<div class="card">
+<b>Câu 9:</b> MonthCalendar không có thuộc tính nào?
+<div class="answer">Đáp án: Format</div>
+</div>
+
+<div class="card">
+<b>Câu 10:</b> Từ khóa this trong C# nghĩa là gì?
+<div class="answer">Đáp án: Đại diện cho lớp đang làm việc</div>
+</div>
+
+</div>
+
+<script>
+
+const searchInput = document.getElementById("search");
+const cards = document.getElementsByClassName("card");
+const clearBtn = document.querySelector(".clear-btn");
+
+searchInput.addEventListener("input", function(){
+
+    let filter = searchInput.value.toLowerCase();
+
+    clearBtn.style.display = filter ? "block" : "none";
+
+    for(let i=0;i<cards.length;i++){
+
+        let text = cards[i].innerText.toLowerCase();
+
+        if(text.includes(filter)){
+            cards[i].style.display="block";
+        }else{
+            cards[i].style.display="none";
+        }
+
+    }
+
+});
+
+function clearSearch(){
+
+    searchInput.value="";
+    clearBtn.style.display="none";
+
+    for(let i=0;i<cards.length;i++){
+        cards[i].style.display="block";
+    }
+
+}
+
+</script>
+
+</body>
+</html>
