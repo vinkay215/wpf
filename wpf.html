@@ -96,11 +96,18 @@ h1{
     </a>
 
 
-    <a class="btn black"
-       href="https://wpf-nuq8.vercel.app/preview.html">
+    <button class="btn black"
+       onclick="window.location.href='https://wpf-nuq8.vercel.app/preview.html'">
        TRẮC NGHIỆM
-    </a>
+    </button>
 </div>
+
+<script>
+// Thêm xử lý bổ sung nếu cần
+document.querySelector('.btn.black:last-of-type').addEventListener('click', function() {
+    console.log('Điều hướng đến trang TRẮC NGHIỆM');
+});
+</script>
 
 </body>
 </html>
