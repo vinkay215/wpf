@@ -2,61 +2,57 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Ôn tập .NET / WPF</title>
+<title>Ôn tập WPF / .NET</title>
 
 <style>
 
 body{
-    font-family: Arial;
-    background:#f3f4f6;
-    padding:40px;
+font-family: Arial;
+background:#f3f4f6;
+padding:40px;
 }
 
 h1{
-    text-align:center;
+text-align:center;
 }
 
-.search-container{
-    position:relative;
-    max-width:500px;
-    margin:20px auto;
+.search-box{
+position:relative;
+max-width:650px;
+margin:30px auto;
 }
 
 #search{
-    width:100%;
-    padding:12px 40px 12px 15px;
-    border-radius:8px;
-    border:1px solid #ccc;
-    font-size:16px;
+width:100%;
+padding:14px 40px 14px 15px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
 }
 
-.clear-btn{
-    position:absolute;
-    right:10px;
-    top:50%;
-    transform:translateY(-50%);
-    cursor:pointer;
-    font-size:18px;
-    color:#888;
-    display:none;
-}
-
-.clear-btn:hover{
-    color:black;
+.clear{
+position:absolute;
+right:10px;
+top:50%;
+transform:translateY(-50%);
+cursor:pointer;
+display:none;
+font-size:18px;
+color:#777;
 }
 
 .card{
-    background:white;
-    padding:15px;
-    margin:10px auto;
-    border-radius:8px;
-    max-width:700px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+background:white;
+padding:15px;
+margin:10px auto;
+max-width:750px;
+border-radius:10px;
+box-shadow:0 3px 8px rgba(0,0,0,0.1);
 }
 
 .answer{
-    margin-top:5px;
-    color:green;
+color:green;
+margin-top:5px;
 }
 
 </style>
@@ -64,101 +60,123 @@ h1{
 
 <body>
 
-<h1>Ôn tập .NET / WPF</h1>
+<h1>Ôn tập WPF / .NET</h1>
 
-<div class="search-container">
-<input type="text" id="search" placeholder="Tìm câu hỏi...">
-<span class="clear-btn" onclick="clearSearch()">✖</span>
+<div class="search-box">
+<input id="search" placeholder="Tìm câu hỏi...">
+<span class="clear" onclick="clearSearch()">✖</span>
 </div>
 
 <div id="list">
 
-<div class="card">
-<b>Câu 1:</b> Thư viện nào liên quan đến các lớp thực thi chức năng GUI?
-<div class="answer">Đáp án: System.Drawing</div>
-</div>
+<!-- 39 câu -->
 
-<div class="card">
-<b>Câu 2:</b> Thư viện nào liên quan đến các lớp toán học?
-<div class="answer">Đáp án: System.Math</div>
-</div>
+<div class="card"><b>[TV] Câu 1:</b> WPF dùng ngôn ngữ gì? <div class="answer">XAML</div></div>
+<div class="card"><b>[TV] Câu 2:</b> Ưu điểm WPF? <div class="answer">Vector + Data Binding</div></div>
+<div class="card"><b>[TV] Câu 3:</b> Hiển thị bảng? <div class="answer">DataGrid</div></div>
+<div class="card"><b>[TV] Câu 4:</b> Window load xong? <div class="answer">Window_Loaded</div></div>
+<div class="card"><b>[TV] Câu 5:</b> Văn bản tĩnh? <div class="answer">TextBlock</div></div>
 
-<div class="card">
-<b>Câu 3:</b> Một khối kèm theo code có thể throw ngoại lệ?
-<div class="answer">Đáp án: Try</div>
-</div>
+<div class="card"><b>[TV] Câu 6:</b> Khóa chính EF? <div class="answer">[Key]</div></div>
+<div class="card"><b>[TV] Câu 7:</b> Kiểm tra TextBox? <div class="answer">TextChanged</div></div>
+<div class="card"><b>[TV] Câu 8:</b> Database First? <div class="answer">Sinh Entity</div></div>
+<div class="card"><b>[TV] Câu 9:</b> Logic MVVM? <div class="answer">ViewModel</div></div>
+<div class="card"><b>[TV] Câu 10:</b> TwoWay Binding? <div class="answer">Cập nhật 2 chiều</div></div>
 
-<div class="card">
-<b>Câu 4:</b> Object có quan hệ gì với các kiểu khác?
-<div class="answer">Đáp án: Cha</div>
-</div>
+<div class="card"><b>[TV] Câu 11:</b> .NET chạy chủ yếu trên? <div class="answer">Windows</div></div>
+<div class="card"><b>[TV] Câu 12:</b> Người tạo C#? <div class="answer">Anders Hejlsberg</div></div>
+<div class="card"><b>[TV] Câu 13:</b> Cho phép override? <div class="answer">virtual</div></div>
+<div class="card"><b>[TV] Câu 14:</b> WPF viết tắt? <div class="answer">Windows Presentation Foundation</div></div>
+<div class="card"><b>[TV] Câu 15:</b> Panel chia hàng cột? <div class="answer">Grid</div></div>
 
-<div class="card">
-<b>Câu 5:</b> Ứng dụng .NET chạy trên ngôn ngữ nào?
-<div class="answer">Đáp án: Cả 3 ý trên</div>
-</div>
+<div class="card"><b>[TV] Câu 16:</b> Chọn ngày? <div class="answer">DatePicker</div></div>
+<div class="card"><b>[TV] Câu 17:</b> TextBox thay đổi? <div class="answer">TextChanged</div></div>
+<div class="card"><b>[TV] Câu 18:</b> Quản lý DB EF? <div class="answer">DbContext</div></div>
+<div class="card"><b>[TV] Câu 19:</b> MVVM gồm? <div class="answer">Model View ViewModel</div></div>
+<div class="card"><b>[TV] Câu 20:</b> ONNX Runtime dùng? <div class="answer">Chạy model AI</div></div>
+    
+<div class="card"><b>Câu 1:</b> Thư viện GUI? <div class="answer">System.Drawing</div></div>
+<div class="card"><b>Câu 2:</b> Thư viện toán học? <div class="answer">System.Math</div></div>
+<div class="card"><b>Câu 3:</b> Khối có thể throw exception? <div class="answer">Try</div></div>
+<div class="card"><b>Câu 4:</b> Object là gì với các kiểu khác? <div class="answer">Cha</div></div>
+<div class="card"><b>Câu 5:</b> .NET chạy ngôn ngữ nào? <div class="answer">Cả 3 ý trên</div></div>
+<div class="card"><b>Câu 6:</b> FormClosing xảy ra khi? <div class="answer">Form đang đóng</div></div>
+<div class="card"><b>Câu 7:</b> DataAdapter nạp DataSet bằng gì? <div class="answer">Fill()</div></div>
+<div class="card"><b>Câu 8:</b> Control danh sách khi click? <div class="answer">ComboBox</div></div>
+<div class="card"><b>Câu 9:</b> MonthCalendar không có gì? <div class="answer">Format</div></div>
+<div class="card"><b>Câu 10:</b> this trong C#? <div class="answer">Đại diện lớp hiện tại</div></div>
 
-<div class="card">
-<b>Câu 6:</b> Sự kiện FormClosing xảy ra khi nào?
-<div class="answer">Đáp án: Khi form đang đóng</div>
-</div>
+<div class="card"><b>Câu 11:</b> Không phải thuộc tính Command? <div class="answer">State</div></div>
+<div class="card"><b>Câu 12:</b> Thư viện tập hợp? <div class="answer">System.Collections</div></div>
+<div class="card"><b>Câu 13:</b> Đặc trưng OOP? <div class="answer">Tất cả đều đúng</div></div>
+<div class="card"><b>Câu 14:</b> Class kế thừa từ? <div class="answer">Object</div></div>
+<div class="card"><b>Câu 15:</b> Control nhập dữ liệu? <div class="answer">TextBox</div></div>
 
-<div class="card">
-<b>Câu 7:</b> DataAdapter dùng phương thức nào nạp DataSet?
-<div class="answer">Đáp án: Fill()</div>
-</div>
+<div class="card"><b>Câu 16:</b> AutoSize Label? <div class="answer">Tự chỉnh kích thước</div></div>
+<div class="card"><b>Câu 17:</b> CLR làm gì? <div class="answer">Quản lý bộ nhớ</div></div>
+<div class="card"><b>Câu 18:</b> Properties sửa code ở? <div class="answer">Designer.cs</div></div>
+<div class="card"><b>Câu 19:</b> Control nhiều dòng? <div class="answer">RichTextBox</div></div>
+<div class="card"><b>Câu 20:</b> StackPanel sắp xếp? <div class="answer">Ngang hoặc dọc</div></div>
 
-<div class="card">
-<b>Câu 8:</b> Control nào hiển thị danh sách khi click?
-<div class="answer">Đáp án: ComboBox</div>
-</div>
+<div class="card"><b>Câu 21:</b> Entity Framework là gì? <div class="answer">ORM cho .NET</div></div>
+<div class="card"><b>Câu 22:</b> Lambda expression? <div class="answer">Biểu thức ẩn danh</div></div>
+<div class="card"><b>Câu 23:</b> LINQ dùng để? <div class="answer">Truy vấn dữ liệu</div></div>
+<div class="card"><b>Câu 24:</b> Ưu điểm WPF? <div class="answer">Tách UI và logic</div></div>
+<div class="card"><b>Câu 25:</b> Ngôn ngữ giao diện WPF? <div class="answer">XAML</div></div>
 
-<div class="card">
-<b>Câu 9:</b> MonthCalendar không có thuộc tính nào?
-<div class="answer">Đáp án: Format</div>
-</div>
+<div class="card"><b>Câu 26:</b> Control nhập văn bản WPF? <div class="answer">TextBox</div></div>
+<div class="card"><b>Câu 27:</b> Grid dùng để? <div class="answer">Chia hàng cột</div></div>
+<div class="card"><b>Câu 28:</b> ORM là gì? <div class="answer">Object Relational Mapping</div></div>
+<div class="card"><b>Câu 29:</b> Database First? <div class="answer">Sinh code từ DB</div></div>
+<div class="card"><b>Câu 30:</b> Lớp gốc exception? <div class="answer">Exception</div></div>
 
-<div class="card">
-<b>Câu 10:</b> Từ khóa this trong C# nghĩa là gì?
-<div class="answer">Đáp án: Đại diện cho lớp đang làm việc</div>
-</div>
+<div class="card"><b>Câu 31:</b> Không phải reference type? <div class="answer">Primitive</div></div>
+<div class="card"><b>Câu 32:</b> Không phải value type? <div class="answer">Class</div></div>
+<div class="card"><b>Câu 33:</b> Value type? <div class="answer">char</div></div>
+<div class="card"><b>Câu 34:</b> Downcasting dùng? <div class="answer">as</div></div>
+<div class="card"><b>Câu 35:</b> Điều kiện switch ở đâu? <div class="answer">Sau switch</div></div>
+
+<div class="card"><b>Câu 36:</b> Switch expression? <div class="answer">Tất cả các ý</div></div>
+<div class="card"><b>Câu 37:</b> Break dùng? <div class="answer">Thoát vòng lặp</div></div>
+<div class="card"><b>Câu 38:</b> Foreach lặp theo? <div class="answer">Số phần tử</div></div>
+<div class="card"><b>Câu 39:</b> Ngôn ngữ ra cùng .NET? <div class="answer">C#</div></div>
+
+
+<!-- 20 câu TV -->
+
 
 </div>
 
 <script>
 
-const searchInput = document.getElementById("search");
-const cards = document.getElementsByClassName("card");
-const clearBtn = document.querySelector(".clear-btn");
+const input=document.getElementById("search");
+const cards=document.getElementsByClassName("card");
+const clear=document.querySelector(".clear");
 
-searchInput.addEventListener("input", function(){
+input.addEventListener("input",function(){
 
-    let filter = searchInput.value.toLowerCase();
+let v=input.value.toLowerCase();
 
-    clearBtn.style.display = filter ? "block" : "none";
+clear.style.display=v?"block":"none";
 
-    for(let i=0;i<cards.length;i++){
+for(let i=0;i<cards.length;i++){
 
-        let text = cards[i].innerText.toLowerCase();
+let t=cards[i].innerText.toLowerCase();
 
-        if(text.includes(filter)){
-            cards[i].style.display="block";
-        }else{
-            cards[i].style.display="none";
-        }
+cards[i].style.display=t.includes(v)?"block":"none";
 
-    }
+}
 
 });
 
 function clearSearch(){
 
-    searchInput.value="";
-    clearBtn.style.display="none";
+input.value="";
+clear.style.display="none";
 
-    for(let i=0;i<cards.length;i++){
-        cards[i].style.display="block";
-    }
+for(let c of cards){
+c.style.display="block";
+}
 
 }
 
