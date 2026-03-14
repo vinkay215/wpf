@@ -1,5 +1,10 @@
 {
-  "buildCommand": "echo 'Static site - no build needed'",
-  "outputDirectory": "./",
-  "public": false
+  "buildCommand": "echo 'Static site ready'",
+  "outputDirectory": ".",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/wpf.html"
+    }
+  ]
 }
